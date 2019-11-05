@@ -1,0 +1,18 @@
+spring:
+  kafka:
+    bootstrap-servers: 127.0.0.1:9000
+    ssl: # if you use SSL
+      trust-store-password: kafka
+      key-password: wUUve281
+    properties: # if you use SSL
+      security.protocol: SSL
+    consumer:
+      enable-auto-commit: true
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      auto-offset-reset: latest
+      group-id: kafka-gorup-1
+      max-poll-records: 6000
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-serializer: org.apache.kafka.common.serialization.StringDeserializer

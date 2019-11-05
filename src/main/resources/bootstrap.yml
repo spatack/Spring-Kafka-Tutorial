@@ -1,0 +1,16 @@
+server:
+  port: 8001
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    lease-expiration-duration-in-seconds: 30
+    lease-renewal-interval-in-seconds: 10
+
+  client:
+    service-url:
+      defaultZone: ${EUREKA_DEFAULT_ZONE:http://localhost:8000/eureka}
+    registry-fetch-interval-seconds: 10
+spring:
+  application:
+    name: kafka-client
